@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Win Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 IPL Match Win Predictor</h1>
+
+    <form action="/predict" method="post">
+      <label>Batting Team:</label>
+      <select name="batting_team" required>
+        {% for team in teams %}
+          <option value="{{team}}">{{team}}</option>
+        {% endfor %}
+      </select>
+
+      <label>Bowling Team:</label>
+      <select name="bowling_team" required>
+        {% for team in teams %}
+          <option value="{{team}}">{{team}}</option>
+        {% endfor %}
+      </select>
+
+      <label>City:</label>
+      <select name="city" required>
+        {% for c in cities %}
+          <option value="{{c}}">{{c}}</option>
+        {% endfor %}
+      </select>
+
+      <label>Target Runs:</label>
+      <input type="number" name="target" required>
+
+      <label>Current Score:</label>
+      <input type="number" name="score" required>
+
+      <label>Overs Completed:</label>
+      <input type="number" step="0.1" name="overs" required>
+
+      <label>Wickets Fallen:</label>
+      <input type="number" name="wickets_left" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">
+        <h2>{{ prediction_text }}</h2>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Win Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 IPL Match Win Predictor</h1>
+
+    <form action="/predict" method="post">
+      <label>Batting Team:</label>
+      <select name="batting_team" required>
+        {% for team in teams %}
+          <option value="{{team}}">{{team}}</option>
+        {% endfor %}
+      </select>
+
+      <label>Bowling Team:</label>
+      <select name="bowling_team" required>
+        {% for team in teams %}
+          <option value="{{team}}">{{team}}</option>
+        {% endfor %}
+      </select>
+
+      <label>City:</label>
+      <select name="city" required>
+        {% for c in cities %}
+          <option value="{{c}}">{{c}}</option>
+        {% endfor %}
+      </select>
+
+      <label>Target Runs:</label>
+      <input type="number" name="target" required>
+
+      <label>Current Score:</label>
+      <input type="number" name="score" required>
+
+      <label>Overs Completed:</label>
+      <input type="number" step="0.1" name="overs" required>
+
+      <label>Wickets Fallen:</label>
+      <input type="number" name="wickets_left" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">
+        <h2>{{ prediction_text }}</h2>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🏏 IPL Win Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 IPL Match Win Predictor</h1>
+
+    <form action="/predict" method="post">
+      <label>Batting Team:</label>
+      <select name="batting_team" required>
+        {% for team in teams %}
+          <option value="{{ team }}">{{ team }}</option>
+        {% endfor %}
+      </select>
+
+      <label>Bowling Team:</label>
+      <select name="bowling_team" required>
+        {% for team in teams %}
+          <option value="{{ team }}">{{ team }}</option>
+        {% endfor %}
+      </select>
+
+      <label>City:</label>
+      <select name="city" required>
+        {% for c in cities %}
+          <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+      </select>
+
+      <label>Target Runs:</label>
+      <input type="number" name="target" placeholder="e.g., 180" min="0" required>
+
+      <label>Current Score:</label>
+      <input type="number" name="score" placeholder="e.g., 100" min="0" required>
+
+      <label>Overs Completed:</label>
+      <input type="number" step="0.1" name="overs" placeholder="0.0 - 20.0" min="0" max="20" required>
+
+      <label>Wickets Fallen:</label>
+      <input type="number" name="wickets_left" placeholder="0-10" min="0" max="10" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">
+        <h2>{{ prediction_text }}</h2>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
